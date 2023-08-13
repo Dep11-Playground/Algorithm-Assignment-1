@@ -13,7 +13,6 @@ class Algo4 {
             }
 
         }
-
         System.out.println(Arrays.toString(nums));
     }
 }
