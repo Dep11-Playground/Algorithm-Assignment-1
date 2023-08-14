@@ -17,11 +17,24 @@ class Algo1 {
         } while (input < 0);
 
         int num = 0;
+        long first = 0;
+        long second = 1;
+        long next = 0;
         do {
             double previousFib = fib;
-            fib +=  
+
+            if (num == 1){
+                fib = first;
+            }else if(num == 2){
+                fib = second;
+            }else{
+                fib = first + second;
+                first = second;
+                second = fib;
+            }
+            
             num++;
-        } while (num != input);
+        } while (num != input+1);
 
         System.out.println("Fib number : "+ fib);
     }
